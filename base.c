@@ -48,9 +48,37 @@ void add_a_data(Record records[]){
   fclose(fp);
 }
 
+void update_data(Record records[]){
+  // 3: Update data
+  int input;
+  char nullStr[20] = {"\0"};
+
+  printf("Enter number for specific car (ex : 2) : ");
+  scanf("%d", &input);
+  
+  strcpy(records[input-1].carname, nullStr);
+  strcpy(records[input-1].carnumber, nullStr);
+  strcpy(records[input-1].carcolor, nullStr);
+  records[input-1].manufacturedate = 0;
+
+  printf("Enter new car name (ex : SantaFe): ");
+  scanf("%s", records[input-1].carname);
+  printf("Enter new car number (ex : 32가2890) : ");
+  scanf("%s", records[input-1].carnumber);
+  printf("Enter new car color (ex : black) : ");
+  scanf("%s", records[input-1].carcolor);
+  printf("Enter new car manufacture date (ex : 20200403) : ");
+  scanf("%d", &records[input-1].manufacturedate);
+  printf("\n> Record Updated\n");
+  printf("> Number of cars : %d\n\n", NumberOfCars);
+}
+
+
+
+
 
 void delete_a_data(Record records[]){
-  // 3: Delete a car
+  // 4: Delete a car
   
   int input;
   char nullStr[20] = {"\0"};
@@ -70,7 +98,7 @@ void delete_a_data(Record records[]){
 
 
 void delete_all(Record records[]){
-  // 4: Delete all cars
+  // 5: Delete all cars
   char nullStr[20] = {"\0"};
 
   for(int i = 0 ; i < Index ; i++) {
@@ -94,7 +122,7 @@ void delete_all(Record records[]){
 // Output: none
 // - Leave a brief information about the function
 void print_all_records(Record records[]){
-	// 5: Print all cars
+	// 6: Print all cars
   for(int i = 0 ; i < Index ; i++) {
     printf("\n[%d번째 자동차]\n", i+1);
     printf("> Car name: %s\n", records[i].carname);
@@ -107,7 +135,7 @@ void print_all_records(Record records[]){
 
 
 void print_specific_records(Record records[]) {
-  // 6: Print specific car
+  // 7: Print specific car
   int input;
   printf("Enter number for specific car (ex : 2) : ");
   scanf("%d", &input);
@@ -121,7 +149,7 @@ void print_specific_records(Record records[]) {
 
 
 void print_multi_records(Record records[]){
-  // 7: Print specific number of cars
+  // 8: Print specific number of cars
   int input;
   printf("Enter number to print cars (ex : 5) : ");
   scanf("%d", &input);
@@ -136,7 +164,7 @@ void print_multi_records(Record records[]){
 
 
 void save_a_data(Record records[]){ 
-  // 8: Save data to the text file
+  // 9: Save data to the text file
   FILE* fp1 = fopen("carsave.txt", "w");
   if(fp1==NULL) {
     printf("Error opening the file\n");
@@ -156,7 +184,7 @@ void save_a_data(Record records[]){
 // TODO: Add more functions to fulfill the requirements
 
 void sort_in_date(Record records[]){
-  // 9. Sort data in manufacture date
+  // 10. Sort data in manufacture date
   int i, j, least, temp;
 
   // 마지막 숫자는 자동으로 정렬되기 때문에 (숫자 개수-1) 만큼 반복한다.
