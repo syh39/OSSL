@@ -1,4 +1,4 @@
-nclude <stdio.h>
+#include <stdio.h>
 #include <string.h>
 #include "base.h"
 #include "extras.h"
@@ -9,13 +9,15 @@ nclude <stdio.h>
 // function prototypes
 void input_handler(int, Record[]);
 void display_menu();
+
+int catcherror = 0;
 // main function
 int main(){
 
 	Record records[MAX_RECORDS];
 	//char user_input[64] = ""; / why char?
   int user_input;
-	while(user_input!=99){
+	while(user_input!=99 && !catcherror){
 		display_menu();
 		printf("\nSelect a menu> ");
 		//fgets(user_input, 64, stdin); / why fgets?
@@ -50,7 +52,7 @@ void input_handler(int input, /* char input[],*/ Record records[]){
     case 11 : defragment(records); break;
     case 12 : display_stats(records); break;
     case 99 : printf("Terminating... bye!\n"); break;
-    default : printf("Unknown menu\n"); break;
+    default : printf("Unknown menu\n\nProgram Terminating\n"); catcherror = 1; break;
     //case 11 : add_a_record(records); break;
   }
 	/* if(!strcmp(input, "1"))
@@ -84,9 +86,9 @@ void input_handler(int input, /* char input[],*/ Record records[]){
 void display_menu(){
 
 	// TODO: Modify this function as you need
-	printf("******************************\n");
-	printf(" Car management system \n");
-	printf("******************************\n");
+	printf("\n*******************************\n");
+	printf("|    Car Management System    | \n");
+	printf("*******************************\n");
 	printf(" 1. Add a new car\n");
   printf(" 2. Add new data from text file\n");
   printf(" 3. Update data\n");

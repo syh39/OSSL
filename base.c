@@ -178,6 +178,9 @@ void save_a_data(Record records[]){
     fprintf(fp1, "> Car manufacture date: %d\n", records[i].manufacturedate);
   }
   fclose(fp1);
+  
+  printf("\n");
+  printf("%d cars data saved to \"carsave.txt\" file successfully\n\n", Index);
 }
 
 
@@ -185,8 +188,15 @@ void save_a_data(Record records[]){
 
 void sort_in_date(Record records[]){
   // 10. Sort data in manufacture date
-  int i, j, least, temp;
+  int sortoption, i, j, least, temp;
 
+  printf("Choose option(1 or 2)\n");
+  printf("1: Sort in descending order(Recently manufactured cars at the top)\n");
+  printf("2: Sort in ascending order(Recently manufactured cars at the bottom)\n");
+  printf("Enter sort option: ");
+  scanf("%d", &sortoption);
+
+  if(sortoption==2) { // ascending order
   // 마지막 숫자는 자동으로 정렬되기 때문에 (숫자 개수-1) 만큼 반복한다.
   for(i=0; i<Index-1; i++){
     least = i;
@@ -202,6 +212,33 @@ void sort_in_date(Record records[]){
         swap_record(&records[i], &records[least]);
     }
   }
+ }
+ else if(sortoption==1) { // descending order
+  // 마지막 숫자는 자동으로 정렬되기 때문에 (숫자 개수-1) 만큼 반복한다.
+  for(i=0; i<Index-1; i++){
+    least = i;
+
+    // 최솟값을 탐색한다.
+    for(j=i+1; j<Index; j++){
+      if(records[j].manufacturedate>records[least].manufacturedate)
+        least = j;
+    }
+
+    // 최솟값이 자기 자신이면 자료 이동을 하지 않는다.
+    if(i != least){
+        swap_record(&records[i], &records[least]);
+    }
+
+}
+} 
+ else {
+   printf("Wrong input!\n");
+   printf("Enter 1 or 2\n");
+   return;
+ }
+
+ printf("\nSort complete!\n");
+
 }
 
 void swap_record(Record* a, Record* b){

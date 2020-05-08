@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-fndef _BASE_H_
-=======
-#ifndef _BASE_H__
->>>>>>> 5f6ab4f66eb4d12154b42af6454d0f5c44b95e85
+
+#ifndef _BASE_H_
 #define _BASE_H_
 
 #include "record.h"
