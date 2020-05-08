@@ -1,0 +1,60 @@
+
+[1번째 자동차]
+> Car name: Sonata
+> Car number: 32가8294
+> Car color: black
+> Car manufacture date: 20150930
+
+[2번째 자동차]
+> Car name: Korando
+> Car number: 51모6273
+> Car color: black
+> Car manufacture date: 20180514
+
+[3번째 자동차]
+> Car name: Sorento
+> Car number: 92아2734
+> Car color: white
+> Car manufacture date: 20170305
+
+[4번째 자동차]
+> Car name: Avante
+> Car number: 19모1839
+> Car color: red
+> Car manufacture date: 20190728
+
+[5번째 자동차]
+> Car name: GV80
+> Car number: 93아1593
+> Car color: gray
+> Car manufacture date: 20200401
+
+[6번째 자동차]
+> Car name: Bongo
+> Car number: 74우4829
+> Car color: blue
+> Car manufacture date: 20200102
+
+[7번째 자동차]
+> Car name: Santafe
+> Car number: 84가5829
+> Car color: white
+> Car manufacture date: 20180209
+
+[8번째 자동차]
+> Car name: Universe
+> Car number: 83다1839
+> Car color: blue
+> Car manufacture date: 20190524
+
+[9번째 자동차]
+> Car name: BMW7Series
+> Car number: 73오2959
+> Car color: white
+> Car manufacture date: 20160518
+
+[10번째 자동차]
+> Car name: Sportage
+> Car number: 46바3742
+> Car color: gray
+> Car manufacture date: 20170911
