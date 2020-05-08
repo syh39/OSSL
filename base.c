@@ -50,6 +50,12 @@ void add_a_data(Record records[]){
 
 void update_data(Record records[]){
   // 3: Update data
+
+  if(Index == 0){
+ 	printf("There is no car data to update\n");
+	return;
+  }
+
   int input;
   char nullStr[20] = {"\0"};
 
@@ -78,8 +84,12 @@ void update_data(Record records[]){
 
 
 void delete_a_data(Record records[]){
-  // 4: Delete a car
-  
+  // 4: Delete a car  
+  if(Index == 0){
+ 	printf("There is no car data to delete\n");
+	return;
+  }
+
   int input;
   char nullStr[20] = {"\0"};
 
@@ -98,7 +108,12 @@ void delete_a_data(Record records[]){
 
 
 void delete_all(Record records[]){
-  // 5: Delete all cars
+  // 5: Delete all cars 
+ 
+  if(Index == 0){
+ 	printf("There is no car data to delete\n");
+	return;
+  }
   char nullStr[20] = {"\0"};
 
   for(int i = 0 ; i < Index ; i++) {
