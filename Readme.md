@@ -33,7 +33,7 @@
 
 ---
 
-![Example](exec_example.png?raw=true)
+![Example](example.jpg)
 
 
 
