@@ -22,6 +22,9 @@ void delete_a_data(Record records[]);
 void delete_all(Record records[]);
 // 5. Delete all cars
 
+void delete_condition(Record records[]);
+// Delete all except condition
+
 void print_all_records(Record[]); 
 // 6. Print all cars
 
