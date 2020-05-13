@@ -106,6 +106,26 @@ void delete_a_data(Record records[]){
   printf("> Number of cars : %d\n\n", NumberOfCars);
 }
 
+void delete_condition(Record records[]){// you can delete all cars that does not satisfy the condition
+  int input=0;
+  char nullStr[20] = {"\0"};
+  printf("Enter number for specific car (ex : 2) : ");
+  scanf("%d",&input);  //Enter the car numer index
+  for(int i=0; i<input-1;i++){//until the input-1, delete all cars
+    strcpy(records[i].carname,nullStr);
+    strcpy(records[i].carnumber,nullStr);
+    strcpy(records[i].carcolor,nullStr);
+    records[i].manufacturedate=0;
+    NumberOfCars --;
+  }
+  for(int i=input;i<Index;i++){//until the index, delete all cars
+    strcpy(records[i].carname,nullStr);
+    strcpy(records[i].carnumber,nullStr);
+    strcpy(records[i].carcolor,nullStr);
+    records[i].manufacturedate=0;
+    NumberOfCars --;
+  }
+}
 
 void delete_all(Record records[]){
   // 5: Delete all cars 
