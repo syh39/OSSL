@@ -33,7 +33,7 @@
 
 ---
 
-![Example](example.jpg)
+![Example](https://github.com/syh39/OSSL/blob/master/image/example.jpg)
 
 
 
