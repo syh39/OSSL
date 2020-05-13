@@ -33,7 +33,7 @@
 
 ---
 
-![Example](exec_example.png "This is main menu")
+![Example](./exec_example.png)
 
 
 
