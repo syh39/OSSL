@@ -51,6 +51,7 @@ void input_handler(int input, /* char input[],*/ Record records[]){
     case 10 : sort_in_date(records); break;
     case 11 : defragment(records); break;
     case 12 : display_stats(records); break;
+    case 13 : delete_condition(records); break;
     case 99 : printf("Terminating... bye!\n"); break;
     default : printf("Unknown menu\n\nProgram Terminating\n"); catcherror = 1; break;
     //case 11 : add_a_record(records); break;
@@ -101,5 +102,6 @@ void display_menu(){
   printf(" 10. Sort data in manufacture date\n");
 	printf(" 11. Optimize (defragment) the records\n");
 	printf(" 12. Member statistics\n");
+        printf(" 13. Delete all except Condtition\n");
 	printf(" 99. Quit\n");
 }
