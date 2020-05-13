@@ -29,13 +29,6 @@
 
 
 
-#### Example of Execution
-
----
-
-![Example](/image/example.jpg)
-
-
 
 
 
