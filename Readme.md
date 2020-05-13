@@ -33,7 +33,7 @@
 
 ---
 
-![Example](https://github.com/syh39/OSSL/blob/master/exec_example.png)
+![Example](https://github.com/syh39/OSSL/blob/master/exec_example.png?raw=true)
 
 
 
